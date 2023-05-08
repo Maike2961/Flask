@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{%block conteudo%}
+<h2 style="text-align: center;">Lista de Frutas</h2>
+<hr>
+<ol>
+
+{% for fruta in frutas %}	
+	<li>{{fruta}}</li>
+	{%endfor%}
+<!--{{url_for('principal')}} esta colocando a def principal em python-->
+
+<form action="{{url_for('principal')}}" method="POST">
+	<div class="form-group">
+		<label for="exemploFruta">Fruta</label>
+		<input class="form-control" id="exemploFruta" type="text" name="fruta">
+	</div>
+	<button class="btn btn-primary">Adicionar</button>
+</form>
+</ol>
+{% endblock conteudo %}
+<!--<ol>
+	<li>{{fruta1}}</li>
+	<li>{{fruta2}}</li>
+	<li>{{fruta3}}</li>
+	<li>{{fruta4}}</li>
+</ol>-->
+
+<!--{{nome}} tem {{idade}} anos-->
+<!--comando python em html-->
+
